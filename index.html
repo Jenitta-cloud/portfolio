@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenitta J | Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ffffff; /* Light text for dark theme */
+            --accent: #00d2ff;  /* Neon blue accent */
+            --text-secondary: #b2bec3;
+            --bg-dark: #0a0a0a; /* Deep dark background */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--primary);
+            background-color: var(--bg-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Darkened Scroll Animation Canvas */
+        #scroll-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 0;
+            object-fit: cover;
+            opacity: 0.4; /* Slightly higher for visibility in dark mode */
+            pointer-events: none;
+            filter: brightness(0.6) contrast(1.2); /* Enhances dark theme feel */
+        }
+
+        .scroll-container {
+            height: 500vh; /* Increased for smoother animation playback */
+            position: relative;
+        }
+
+        .content-overlay {
+            position: relative;
+            z-index: 10;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 5vh 2rem;
+        }
+
+        header {
+            text-align: center;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 5.5rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .contact-info {
+            font-size: 1rem;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* Transparent Glassmorphism Sections */
+        section {
+            margin-bottom: 12vh;
+            background: rgba(255, 255, 255, 0.05); /* Highly transparent */
+            padding: 3rem;
+            border-radius: 24px;
+            backdrop-filter: blur(12px); /* Blurred transparency */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+        }
+
+        p, div {
+            color: var(--text-secondary);
+        }
+
+        strong {
+            color: var(--primary);
+        }
+
+        .edu-item, .project-item {
+            margin-bottom: 2rem;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(0, 210, 255, 0.2);
+            color: var(--accent);
+            padding: 5px 15px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            border: 1px solid var(--accent);
+            margin: 8px 8px 0 0;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 5rem 0;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="scroll-canvas"></canvas>
+
+    <div class="scroll-container">
+        <div class="content-overlay">
+            <header>
+                <h1>JENITTA J</h1>
+                <div class="contact-info">
+                    9489144110 | jenitajeyapal123@gmail.com <br>
+                    Melapalayam, Tirunelveli
+                </div>
+            </header>
+
+            <section id="objective">
+                <h2>Objective</h2>
+                <p>A highly motivated Electronics and Communication Engineering student seeking a position where I can apply my knowledge in embedded systems, IoT, and programming to contribute effectively to innovative projects and gain valuable industry experience. [cite: 11, 13]</p>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <div class="edu-item">
+                    <div class="item-header">
+                        <span>B.E. ECE [cite: 13]</span>
+                        <span>CGPA: 8.393 [cite: 16]</span>
+                    </div>
+                    <div>Government College of Engineering, Tirunelveli [cite: 14]</div>
+                    <small>Passing Year: 2026 [cite: 15]</small>
+                </div>
+                <div class="edu-item">
+                    <div class="item-header">
+                        <span>HSC [cite: 17]</span>
+                        <span>91.8% [cite: 19]</span>
+                    </div>
+                    <div>Ignatius Convent Higher Secondary School, Tirunelveli [cite: 18]</div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Technical Projects</h2>
+                <div class="project-item">
+                    <h3>Image Processing Based Fire Detection [cite: 21]</h3>
+                    <p>A real-time fire detection system that uses image processing. [cite: 25]</p>
+                    <div class="tools">
+                        <span class="tag">Python [cite: 23]</span>
+                        <span class="tag">OpenCV [cite: 23]</span>
+                        <span class="tag">Arduino UNO [cite: 23]</span>
+                        <span class="tag">Serial Communication [cite: 23]</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>Skills & Languages</h2>
+                <p><strong>Programming:</strong> Python, Arduino [cite: 6, 23]</p>
+                <p><strong>Languages:</strong> Tamil[cite: 7], English</p>
+            </section>
+
+            <footer>
+                &copy; 2026 Jenitta J | Portfolio Design
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById("scroll-canvas");
+        const context = canvas.getContext("2d");
+        const html = document.documentElement;
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const frameCount = 240;
+        const currentFrame = index => (
+            `./frames/ezgif-frame-${(index + 1).toString().padStart(3, '0')}.jpg`
+        );
+
+        const images = [];
+        const airbnb = { frame: 0 };
+
+        // Preload frames for smooth playback
+        for (let i = 0; i < frameCount; i++) {
+            const img = new Image();
+            img.src = currentFrame(i);
+            images.push(img);
+        }
+
+        function render() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            const img = images[airbnb.frame];
+            if (!img || !img.complete) return;
+
+            const imgRatio = img.width / img.height;
+            const canvasRatio = canvas.width / canvas.height;
+            let dWidth, dHeight, dx, dy;
+
+            if (imgRatio > canvasRatio) {
+                dHeight = canvas.height;
+                dWidth = dHeight * imgRatio;
+                dx = (canvas.width - dWidth) / 2;
+                dy = 0;
+            } else {
+                dWidth = canvas.width;
+                dHeight = dWidth / imgRatio;
+                dx = 0;
+                dy = (canvas.height - dHeight) / 2;
+            }
+            context.drawImage(img, dx, dy, dWidth, dHeight);
+        }
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = html.scrollTop;
+            const maxScrollTop = html.scrollHeight - window.innerHeight;
+            const scrollFraction = scrollTop / maxScrollTop;
+            const frameIndex = Math.min(
+                frameCount - 1,
+                Math.floor(scrollFraction * frameCount)
+            );
+
+            airbnb.frame = frameIndex;
+            requestAnimationFrame(render);
+        });
+
+        // Ensure first frame loads
+        images[0].onload = render;
+
+        // Resize handler
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            render();
+        });
+    </script>
+</body>
+</html>
